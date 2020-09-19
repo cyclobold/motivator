@@ -1,0 +1,133 @@
+body{
+	background-image: url('../_thirdparties/images/gurkubondinn/peace.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+header{
+	width: 100%;
+	display: flex;
+}
+
+.main-content{
+	height: auto;
+}
+
+#left-navlinks{
+	width: 50%;
+}
+
+#right-navlinks{
+	width: 50%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+#timer-id{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+}
+
+
+input[type='text']{
+	width: 500px;
+	height: 50px;
+	margin-top: -15px;
+	outline: none;
+	background: black;
+	color: white;
+	font-size: 1.3em;
+}
+
+textarea{
+	width: 500px;
+	height: 50px;
+	margin-top: 15px;
+	outline: none;
+	background: transparent;
+	color: white;
+	font-size: 1.3em;
+	resize: none;
+	border-right-style: none;
+	border-left-style: none;
+	margin-bottom: 20px;
+
+
+
+
+}
+
+/**
+ * Navigation Links
+ */
+.nav{
+	display: flex;
+}
+
+.a-navlink{
+	text-decoration: none;
+}
+.a-navlink:visited{
+	color: white;
+}
+
+.ul-navlinks{
+	display: flex;
+	margin-left: -30px;
+}
+
+.navbrand{
+	margin-right: 10px;
+}
+
+.ul-navlinks li{
+	list-style-type: none;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/**
+ * Footer
+ */
+footer{
+	display: flex;
+	width: 100%;
+}
+
+#left-footer-links{
+	width: 50%;
+}
+
+#right-footer-links{
+	width: 50%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+
+/**
+ * Buttons
+ */
+.btn{
+	height: 50px;
+	width: 300px;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: large;
+	background: transparent;
+	color: white;
+}
+
+.btn-action{
+	height: 50px;
+	width: 250px;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: large;
+}
+
+
+
