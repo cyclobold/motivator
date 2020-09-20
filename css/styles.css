@@ -1,10 +1,18 @@
+html, body{
+	height: 100%;
+}
+
+
 body{
-	background-image: url('../_thirdparties/images/gurkubondinn/peace.jpg');
+	background: url('../_thirdparties/images/gurkubondinn/peace.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
+	background-attachment: fixed;
 	font-family: 'IBM Plex Mono', monospace;
+	position: relative;
 }
+
 
 header{
 	width: 100%;
@@ -12,7 +20,8 @@ header{
 }
 
 .main-content{
-	height: auto;
+	height: 100%;
+	display: flex;
 }
 
 #left-navlinks{
@@ -30,7 +39,7 @@ header{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 600px;
+	margin: auto;
 }
 
 
@@ -97,6 +106,8 @@ textarea{
 footer{
 	display: flex;
 	width: 100%;
+	flex-shrink: 0;
+
 }
 
 #left-footer-links{
