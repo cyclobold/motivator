@@ -10,7 +10,6 @@ body{
 	color: white;
 	background-attachment: fixed;
 	font-family: 'IBM Plex Mono', monospace;
-	position: relative;
 }
 
 
@@ -29,7 +28,10 @@ header{
 }
 
 #right-navlinks{	
-	margin-left: auto;
+	margin-left:auto;
+	position: fixed;
+	right: 10px;
+	z-index: 9;
 }
 
 #timer-id{
@@ -40,16 +42,45 @@ header{
 	margin: auto;
 }
 
+.form-box, .form{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
 
-input[type='text']{
-	width: 500px;
+.form-box{
+	background-color: black;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+
+.form-group label{
+	margin-bottom: 5px;
+}
+
+.form-group input{
+	margin-bottom: 10px;
+}
+
+.form-group{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+input[type='text'], input[type='email'], input[type='password']{
+	width: 300px;
 	height: 50px;
-	margin-top: -15px;
+	margin-top: 0px;
 	outline: none;
 	background: black;
 	color: white;
-	font-size: 1.3em;
+	font-size: .9em;
 }
+
+
 
 textarea{
 	width: 500px;
@@ -128,6 +159,22 @@ footer{
 	color: white;
 }
 
+.btn-create-lg{
+	height: 50px;
+	width: 100%;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: large;
+}
+
+.btn-cancel-sm{
+	height: 30px;
+	width: 25%;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: small;
+	background-color: red;
+	color: white;
+}
+
 .btn-action{
 	height: 50px;
 	width: 250px;
@@ -135,5 +182,14 @@ footer{
 	font-size: large;
 }
 
+
+
+/**
+ * Modals
+ */
+
+.close-modal{
+	margin-left: auto;
+}
 
 
