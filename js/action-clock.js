@@ -19,11 +19,34 @@ setInterval(function(){
 	//get the hours 
 	let dateHours = date.getHours();
 
+	let dateSeconds = date.getSeconds();
 	//Set the hours from 24hrs to 12hrs .. 
-	//
+	//Set AM and PM
+	const amPm = (dateHours > 12) ? "PM" : "AM";
+
+	if(dateHours > 12){
+		dateHours = dateHours - 12;
+		dateHours = dateHours.toString();
+		if(dateHours.length == 1){
+			dateHours = "0"+dateHours;
+		}
+	}
+
+	
+	//set the use minutes 
+	dateMinutes = dateMinutes.toString();
+	if(dateMinutes.length == 1){
+		dateMinutes = "0"+dateMinutes;
+	}
+
+	dateSeconds = dateSeconds.toString();
+	if(dateSeconds.length == 1){
+		dateSeconds = "0"+dateSeconds;
+	}
+
 
 	let clockCode = `
-					<h1>${dateHours} : ${dateMinutes}</h1>
+					<h1>${dateHours} : ${dateMinutes} <small>${amPm} </small> <small style='font-size: .5em;'>${dateSeconds}</small></h1>
 
 		`;
 
