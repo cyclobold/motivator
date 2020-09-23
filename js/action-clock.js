@@ -46,7 +46,7 @@ setInterval(function(){
 
 
 	let clockCode = `
-					<h1>${dateHours} : ${dateMinutes} <small>${amPm} </small> <small style='font-size: .5em;'>${dateSeconds}</small></h1>
+					<h1>${dateHours}:${dateMinutes}<small>${amPm} </small><small style='font-size: .5em;'>${dateSeconds}</small></h1>
 
 		`;
 
