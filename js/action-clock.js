@@ -22,7 +22,7 @@ setInterval(function(){
 	let dateSeconds = date.getSeconds();
 	//Set the hours from 24hrs to 12hrs .. 
 	//Set AM and PM
-	const amPm = (dateHours > 12) ? "PM" : "AM";
+	const amPm = (dateHours >= 12) ? "PM" : "AM";
 
 	if(dateHours > 12){
 		dateHours = dateHours - 12;
