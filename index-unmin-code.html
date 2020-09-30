@@ -15,17 +15,20 @@
 		<!--Left links -->
 			<div id='left-navlinks'>
 
-				<nav class='nav'>
+				<nav class='nav'>  
 					
 					<ul class='ul-navlinks'>
 						<a href='' class='navbrand'>ActionClock</a>
 						<li class='list-navlink'><a href='' class='a-navlink'>Home</a></li>
 						<li class='list-navlink'><a href='' class='a-navlink'>About</a></li>
 						<li class='list-navlink'><a href='' class='a-navlink'>Subscribe</a></li>
-					</ul>
+					</ul>	
 				</nav>
-
 			</div>
+			<div id='nav-middle'>Loading weather info ...</div>
+
+	
+
 			<!--Right links -->
 			<div id='right-navlinks'>
 				<button class='btn btn-lg btn-profile' id='create-profile-id' onclick="return test()">Create Profile</button>
@@ -38,12 +41,13 @@
 		<div id='timer-id'>
 			<div id='action-clock-id'></div>
 			<div id='action-query-id'>
+				<h1></h1>
 				<h1>What do you want to do?</h1>
 			</div>
 			<div id='new-action-id'>
 				<textarea></textarea>
 				<div>
-					<button class='btn-action'>Create Action</button>
+					<button type='button' class='btn-action' id='create-action-button'>Create Action</button>
 					<button class='btn-action'>Share Action</button>
 				</div>
 			</div>
@@ -62,7 +66,7 @@
 	</div>
 	<div id='right-footer-links'>Events | Info | Tools</div>
 </footer>
-<script src='js/action-clock.min.js'></script>
+<script type='module' src='js/action-clock.min.js'></script>
 <script src='js/profile.min.js'></script>
 </body>
 </html>
