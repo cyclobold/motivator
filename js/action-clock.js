@@ -59,7 +59,7 @@ setInterval(function(){
 
 
 	let clockCode = `
-					<h1>${dateHours}:${dateMinutes}<small>${amPm}</small><small style='font-size: .5em;'>${dateSeconds}</small></h1>
+					<h1>${dateHours}:${dateMinutes}<small>${amPm}</small><small style='font-size: .5em;'>${dateSeconds}</small><small style='font-size: 30px; position: relative;' onclick='return toggleClockMode()'><i class="fa fa-toggle-on"></i></small></h1>
 
 		`;
 
