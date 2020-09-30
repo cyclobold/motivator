@@ -4,7 +4,7 @@ html, body{
 
 
 body{
-	background: url('../_thirdparties/images/gurkubondinn/peace.jpg');
+	/*background: url('../_thirdparties/images/gurkubondinn/peace.jpg');*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
@@ -24,8 +24,15 @@ header{
 }
 
 #left-navlinks{
-	width: 50%;
+	width: 42%;
+
 }
+
+#nav-middle{
+	width: 40%;
+	justify-content: center;
+}
+
 
 #right-navlinks{	
 	margin-left:auto;

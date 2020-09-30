@@ -7,5 +7,23 @@
 }
 
 #action-query-id{
-	margin-top: 15px;
+	margin-top: 18px;
+	line-height: 20px;
+}
+
+#action-query-id > h1{}
+
+#new-action-id{
+	margin-top: -10px;
+}
+
+#weather-info-id{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#weather-img-id{
+	margin-bottom: -30px;
+
 }
