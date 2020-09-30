@@ -83,7 +83,8 @@ function getAmGreetings(amOrPm, dateHours){
 
 function getPmGreetings(amOrPm, dateHours){
 
-	return (dateHours >= 5) ? "Good evening," : "Good afternoon,";
+	// /return (dateHours >= 5) ? "Good evening," : "Good afternoon,";
+	return "Good afternoon, ";
 }
 
 //Make Action Clock swappable
