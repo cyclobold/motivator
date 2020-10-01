@@ -30,8 +30,6 @@ function startClock(){
 	//Set AM and PM
 	const amPm = (dateHours >= 12) ? "PM" : "AM";
 
-	let greetings = getGreetings(amPm, dateHours); //Get the appropriate greetings..
-
 	let dateHoursString = null;
 
 	if(dateHours > 12){
@@ -50,6 +48,7 @@ function startClock(){
 		}
 	}
 
+	let greetings = getGreetings(amPm, dateHours); //Get the appropriate greetings..
 	
 
 	
@@ -172,7 +171,12 @@ function getAmGreetings(amOrPm, dateHours){
 function getPmGreetings(amOrPm, dateHours){
 
 	// /return (dateHours >= 5) ? "Good evening," : "Good afternoon,";
-	return "Good afternoon, ";
+	//return "Good afternoon, ";
+
+	return (amOrPm == 'PM' && dateHours >= 5 ) ? "Good evening, " : "Good afternoon, ";
+
+
+	
 }
 
 //Make Action Clock swappable
