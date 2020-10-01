@@ -25,10 +25,9 @@ async function showPosition(position){
 		const weather_description = result['weather'][0]['description'];
 
 		const weather_icon = `<div id='weather-info-id'> 
-							<div id='weather-img-id'><img src='http://openweathermap.org/img/wn/${weather_code}@2x.png' style='margin-top: -30px;'></div>
-								<!--<div id='weather-desc'><small>${weather_description}</small></div>-->
-								<div id='weather-meta-id'><small>humidity: ${humidity} temp: ${temp}</small></div>
-							
+							<div id='weather-img-id'>
+							<img src='http://openweathermap.org/img/wn/${weather_code}@2x.png' style='margin-top: -30px;'> 
+							<div id='weather-meta-id'><small>humidity: ${humidity} temp: ${temp}</small></div></div>
 							</div>`;
 
 		document.getElementById("nav-middle").innerHTML = weather_icon;
