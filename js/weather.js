@@ -37,5 +37,5 @@ async function showPosition(position){
 	
 
 }
-//weather();
-//setInterval(weather, 1800000);//Call every 30 minutes
+weather();
+setInterval(weather, 1800000);//Call every 30 minutes
