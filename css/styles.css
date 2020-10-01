@@ -5,6 +5,11 @@ html, body{
 	height: 100%;
 }
 
+button::focus{
+	border: none;
+	outline: none;
+}
+
 
 body{
 	/*background: url('../_thirdparties/images/gurkubondinn/peace.jpg');*/
@@ -28,19 +33,21 @@ header{
 }
 
 #left-navlinks{
-	width: 42%;
+	width: 30%;
 
 }
 
 #nav-middle{
-	width: 40%;
+	width: 55%;
 	justify-content: center;
+	margin: auto;
 }
 
 
 #right-navlinks{	
 	margin-left:auto;
 	position: fixed;
+	top: 10px;
 	right: 10px;
 	z-index: 9;
 }
@@ -136,6 +143,11 @@ textarea{
 	margin-right: 5px;
 }
 
+.ul-navlinks a{
+	text-decoration: none;
+	color: inherit;
+}
+
 /**
  * Footer
  */
@@ -169,11 +181,10 @@ footer{
  * Buttons
  */
 .btn{
-	height: 50px;
-	width: 300px;
+	height: 40px;
+	width: 200px;
 	font-family: 'IBM Plex Mono', monospace;
-	font-size: large;
-	background: transparent;
+	font-size: medium;
 	color: white;
 	cursor: pointer;
 }
@@ -194,6 +205,8 @@ footer{
 	background-color: red;
 	color: white;
 	cursor: pointer;
+	border: none;
+	outline: none;
 }
 
 .btn-action{
@@ -203,6 +216,15 @@ footer{
 	font-size: large;
 	cursor: pointer;
 }
+
+.btn-profile{
+	/*background: #19A0CD;*/
+	background-image: linear-gradient(to right, rgba(25, 160, 205), green);
+	border: none;
+	border-radius: 2px;
+	outline: none;
+}
+
 
 
 

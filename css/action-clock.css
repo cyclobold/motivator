@@ -19,15 +19,20 @@
 	margin-top: -10px;
 }
 
+/*
 #weather-info-id{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
+}*/
 
 #weather-img-id{
 	margin-bottom: -30px;
+	display: flex;
+}
 
+#weather-meta-id{
+	margin-top: 10px;
 }
 
 #clock-toggle-id{
@@ -63,8 +68,8 @@
 }
 
 .digital-clock{
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	background-color: black;
 	color: white;
 	border-radius: 50%;
