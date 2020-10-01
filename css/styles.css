@@ -1,3 +1,6 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
 html, body{
 	height: 100%;
 }
@@ -5,8 +8,9 @@ html, body{
 
 body{
 	/*background: url('../_thirdparties/images/gurkubondinn/peace.jpg');*/
-	background-size: cover;
-	background-repeat: no-repeat;
+	/*background-size: cover;
+	background-repeat: no-repeat;*/
+	background: black;
 	color: white;
 	background-attachment: fixed;
 	font-family: 'IBM Plex Mono', monospace;
