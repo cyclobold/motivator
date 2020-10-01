@@ -132,6 +132,9 @@ function startClock(){
 			setHandRotation(secondHand, dateSecondsRatio);
 		}
 
+		//remove the photo By info in the bottom left corner ..
+		document.getElementById("left-footer-links").innerHTML = "Explore Analog";
+
 		
 
 	}
@@ -273,6 +276,22 @@ function loadDigitalClock(){
 	document.getElementById("clock-toggle-id").innerHTML = `<i class="fa fa-toggle-on"></i>`;
 	//alert("Changed to digital");
 	location.reload();
+}
+
+
+document.getElementById("action-clock-tools").addEventListener('click', loadClockTools);
+
+
+
+/**
+ * Loads the Clock Tools...
+ * Allows the following settings..
+ * 
+ * @return {[type]} [description]
+ */
+function loadClockTools(){
+	event.preventDefault();
+	
 }
 
 
