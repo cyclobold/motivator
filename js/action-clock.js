@@ -172,8 +172,8 @@ function getPmGreetings(amOrPm, dateHours){
 
 	// /return (dateHours >= 5) ? "Good evening," : "Good afternoon,";
 	//return "Good afternoon, ";
-
-	return (amOrPm == 'PM' && dateHours >= 5 ) ? "Good evening, " : "Good afternoon, ";
+	console.log(amOrPm);
+	return (amOrPm == 'PM' && dateHours >= 5 && dateHours < 12 && dateHours != 12 ) ? "Good evening, " : "Good afternoon, ";
 
 
 	
