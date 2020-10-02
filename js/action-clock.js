@@ -12,7 +12,7 @@ let textarea = new_action_id.children[0];
 
 //Pull the placeholder from the server..
 //Placeholders will be changing periodically...
-textarea.placeholder = "Meeting with James at 12pm tomorrow";
+textarea.placeholder = "Finish a new chapter of my book before 12 noon";
 
 startClock();
 setInterval(startClock, 1000);
@@ -77,11 +77,11 @@ function startClock(){
 	if(currentClockMode['mode'] == 'digital'){
 
 		clockCode = `
-					<h1>${dateHoursString}:${dateMinutesString}<small>${amPm}</small><small style='font-size: .5em;'>${dateSecondsString}</small><small id='clock-toggle-id' style='font-size: 30px; position: relative;'>${clockModeToggleIcon}</small></h1>
+					<h1>${dateHoursString}:${dateMinutesString}<small>${amPm}</small><small style='font-size: .5em;'>${dateSecondsString}</small><small id='clock-toggle-id' style='font-size: 30px; position: relative;' title='change clock mode'>${clockModeToggleIcon}</small></h1>
 
 		`;
 
-		document.getElementById("action-query-id").children[0].innerHTML = greetings + "<hr>";
+		document.getElementById("action-query-id").children[0].innerHTML = greetings + "<hr style='margin-bottom: -10px;'>";
 
 		clock_div.innerHTML = clockCode;
 	}else{
@@ -105,11 +105,11 @@ function startClock(){
 									<div class='number num6'>|</div>
 									<div class='number num9'>|</div>
 								</div>
-								<small id='clock-toggle-id' style='font-size: 30px;'>${clockModeToggleIcon}</small>
+								<small id='clock-toggle-id' style='font-size: 30px;' title='change clock mode'>${clockModeToggleIcon}</small>
 								</div>
 								`;
 
-	document.getElementById("action-query-id").children[0].innerHTML = greetings + "<hr>";
+	document.getElementById("action-query-id").children[0].innerHTML = greetings + "<hr style='margin-bottom: -10px;'>";
 
 	clock_div.innerHTML = clockCode;
 	//add this newly created element to the DOM..
