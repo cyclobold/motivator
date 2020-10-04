@@ -143,6 +143,27 @@
 
 
 
+/**
+ * Test Classes
+ */
+
+.action-tools-class{
+	color: white;
+	background: rgba(0,0,0, 0.5);
+	padding: 20px;
+	position: absolute;
+	height: 500px;
+	width: 400px;
+	right:0;
+	bottom: -50px;
+	z-index: 2;
+}
+
+.action-div-tools{
+	display: none;
+}
+
+
 
 
 

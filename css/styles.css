@@ -12,12 +12,12 @@ button::focus{
 
 
 body{
-	/*background: url('../_thirdparties/images/gurkubondinn/peace.jpg');*/
-	/*background-size: cover;
-	background-repeat: no-repeat;*/
+	/*background: url('../_thirdparties/images/gurkubondinn/peace.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 	background: black;
+	background-attachment: fixed;*/
 	color: white;
-	background-attachment: fixed;
 	font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -40,6 +40,9 @@ header{
 #nav-middle{
 	width: 55%;
 	justify-content: center;
+	align-self: center;
+	align-items: center;
+	align-content: center;
 	margin: auto;
 }
 
@@ -88,6 +91,7 @@ header{
 }
 
 
+
 input[type='text'], input[type='email'], input[type='password']{
 	width: 300px;
 	height: 50px;
@@ -97,6 +101,28 @@ input[type='text'], input[type='email'], input[type='password']{
 	color: white;
 	font-size: .9em;
 }
+
+input[type='checkbox']{
+}
+
+.top-input-search-form{
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	position: absolute;
+	left: 12%;
+	top: 10px;
+}
+
+input.top-input-search-form[type='text']{
+	padding-left: 20px;
+	box-sizing: border-box;
+	height: 35px;
+	background: transparent;
+	color: white;
+}
+
+
 
 
 
@@ -113,6 +139,24 @@ textarea{
 	border-left-style: none;
 	margin-bottom: 20px;
 }
+
+input.main-action-input-query[type='text']{
+	width: 550px;
+	height: 50px;
+	margin-top: 15px;
+	outline: none;
+	background: transparent;
+	color: white;
+	font-size: 1.3em;
+	resize: none;
+	border-right-style: none;
+	border-left-style: none;
+	margin-bottom: 20px;
+	font-family: inherit;
+
+}
+
+
 
 /**
  * Navigation Links
@@ -237,4 +281,15 @@ footer{
 	cursor: pointer;
 }
 
+
+/**
+ * External Classes 
+ */
+.fa-search{
+	position: relative;
+	left: 20px;
+	bottom: 5px;
+	z-index: 1;
+	font-size: 32px;
+}
 

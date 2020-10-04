@@ -18,7 +18,9 @@
 					
 					<ul class='ul-navlinks'>
 						<a href='#' class='navbrand'>ActionClock</a>
-						<li class='list-navlink'><a href='' class='a-navlink'>Subscribe</a></li>
+						<!--<li class='list-navlink'><a href='' class='a-navlink'>Subscribe</a></li>-->
+						<i class='fa fa-search'></i>
+						<input type='text' class='top-input-search-form' placeholder="Search for anything ...">
 					</ul>	
 				</nav>
 			</div>
@@ -40,13 +42,14 @@
 			<div id='action-clock-id'></div>
 			<div id='action-query-id'>
 				<h1></h1>
-				<h1>What is your main goal today?</h1>
+				<h1>What is your main goal for today?</h1>
 			</div>
 			<div id='new-action-id'>
 				<textarea></textarea>
+				<!--<input type='text' class='main-action-input-query'>-->
 				<div class='action-buttons'>
 					<button type='button' class='btn-action' id='create-action-button'>Create Goal</button>
-					<button class='btn-action'>Share Goal</button>
+					<button class='btn-action'>Todo List</button>
 				</div>
 			</div>
 
@@ -57,11 +60,12 @@
 
 <footer>
 	<div id='left-footer-links'>
-		Photo by Mizrak
+		Andreas Gücklhorn
 	</div>
 	<div id='right-footer-links'>
 		<a href='#'> <i class="fa fa-bullhorn"></i> Events </a> | 
 		<a href='#'> <i class="fa fa-info-circle"></i> Info </a> |  
+		<div id='action-tools-div'></div>
 		<a href='#' id='action-clock-tools'><i class='fa fa-cog'></i> Tools</a> 
 	</div>
 </footer>
