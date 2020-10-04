@@ -1,4 +1,5 @@
 "use strict"
+//import  { Elementree } from './elementree.js';
 
 import { weather } from './weather.js';
 
@@ -12,7 +13,7 @@ let textarea = new_action_id.children[0];
 
 //Pull the placeholder from the server..
 //Placeholders will be changing periodically...
-textarea.placeholder = "Finish a new chapter of my book before 12 noon";
+textarea.placeholder = "Finish a new chapter of my book before 12pm";
 
 startClock();
 setInterval(startClock, 1000);
@@ -165,34 +166,19 @@ function getGreetings(amOrPm, dateHours){
 
 function getAmGreetings(amOrPm, dateHours){
 
-	return "Good morning,";
+	return "Good morning, James ";
 }
 
 function getPmGreetings(amOrPm, dateHours){
 
 	// /return (dateHours >= 5) ? "Good evening," : "Good afternoon,";
 	//return "Good afternoon, ";
-	console.log(amOrPm);
-	return (amOrPm == 'PM' && dateHours >= 5 && dateHours < 12 && dateHours != 12 ) ? "Good evening, " : "Good afternoon, ";
+	//console.log(amOrPm);
+	return (amOrPm == 'PM' && dateHours >= 5 && dateHours < 12 && dateHours != 12 ) ? "Good evening, James " : "Good afternoon, James ";
 
 
 	
 }
-
-//Make Action Clock swappable
-//	
-//	
-//	
-
-
-
-
-//Randomly selecting background images .. 
-//Update the background Image to be loaded by JavaScript 
-//document.body.style.backgroundImage = "url('_thirdparties/images/gurkubondinn/peace.jpg')";
-
-
-
 
 
 //Get the data from the textarea..
@@ -204,6 +190,134 @@ document.getElementById("create-action-button").addEventListener('click', functi
 		test();
 	}
 });
+
+
+
+/**
+ * Clock Settings --
+ */
+
+document.getElementById("action-clock-tools").addEventListener('click', function(e){
+
+	const toolsDialogElement  = document.createElement("div");
+
+	//Add a class to this element 
+	toolsDialogElement.classList.add('action-tools-class');
+
+	const action_tools_div = document.getElementById("action-tools-div");
+	action_tools_div.style.display = 'block';
+
+	if(action_tools_div.children.length > 0){
+			//There are children..
+			const test_class = document.querySelectorAll("div.action-tools-class");
+
+			for(let i = 0; i < test_class.length; i++){
+				document.getElementById("action-tools-div").removeChild(test_class[i]);
+			}	
+		action_tools_div.style.display = 'none';
+	}else{
+		//there are no children .. 
+		toolsDialogElement.innerHTML = `<h3>Tools and Preferences</h3>
+									<hr>
+									<form id='action-tools-settings-id'>
+										<div>
+											<label>Background Images</label>
+											
+											<div style='display: flex; margin-top: 10px;'>
+												<input type='checkbox' name='show_background' id='action-show-background' value='on'> Show Background Image 
+											</div>
+
+										</div>
+
+									</form>
+									`;
+		const appendedElement = document.getElementById("action-tools-div").appendChild(toolsDialogElement);
+
+		//check the localStorage for the current background settings .. 
+		let current_background_settings = localStorage.getItem("action-background-settings");
+		if(current_background_settings){
+				current_background_settings = JSON.parse(current_background_settings);
+				//apply the current settings to the form ..
+				if(current_background_settings['show_background'] == true){
+					//the add "checked" to the attribute of the form ..
+					document.getElementById("action-show-background").setAttribute("checked", "checked");
+				}
+
+		}
+
+
+
+		//Settings for the Background Image.
+		document.getElementById("action-show-background").onclick = function(e){
+
+			if(this.checked){
+				//the background image option is checked ..
+				//add the background image 
+				//Randomly selecting background images .. 
+				//Update the background Image to be loaded by JavaScript 
+				//Set the CSS of the background image from here ..
+				document.body.style.background = "url('_thirdparties/images/gurkubondinn/peace.jpg')";
+				document.body.style.backgroundRepeat = "no-repeat";
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundAttachment = "fixed";
+
+				const backgroundSettings = {
+					'show_background' : true,
+					'background_url' : '_thirdparties/images/gurkubondinn/peace.jpg',
+					'updated_at' : null,
+				}
+
+				//set the localStorage??? 
+				//console.log(e.view.localStorage);
+				localStorage.setItem('action-background-settings', JSON.stringify(backgroundSettings));
+				
+
+			}else{
+				//the background image is removed ..
+				//remove the background image and resolve back to the background color ..
+				document.body.style.background = "#000";
+
+				//Set this to the localStorage .. 
+				const backgroundSettings = {
+					'show_background' : false,
+					'background_url' : null,
+					'updated_at': null
+				}
+
+				localStorage.setItem('action-background-settings', JSON.stringify(backgroundSettings));
+
+			}
+			
+	
+
+		}
+
+
+		
+	}	
+
+
+	
+
+
+});
+
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+
+
+function closeTool(){
+
+	alert('working');
+
+}
+
+
 
 
 /**
@@ -298,6 +412,20 @@ function loadClockTools(){
 	
 }
 
+
+
+/**
+ * Clicks on the body document directly ..
+ */
+document.onclick = function(){
+		
+		//remove any modals on the page ..
+		//check if any modals is opened ..
+		
+
+
+
+}
 
 
 
